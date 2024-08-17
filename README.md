@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-## Key Features Shopping Cart
+## Key Features of Shopping Cart
 ### Add to Cart:  
 Users can add products to their cart with a single click. Each product includes an image, title, description, price, rating and reviews.
 
