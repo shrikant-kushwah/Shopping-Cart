@@ -1,49 +1,43 @@
-
 import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from "../redux/Slices/cartSlice"
+import { add, remove } from "../redux/Slices/cartSlice";
 import { toast } from "react-hot-toast";
 
 const Product = ({ post }) => {
-
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const addToCart = () => {
     dispatch(add(post));
     toast.success("Item added to cart");
-  }
+  };
 
   const removeFromCart = () => {
-    dispatch(remove(post.id))
+    dispatch(remove(post.id));
     toast.error("Item removed from cart");
-  }
+  };
 
   return (
-    <div className="flex flex-col items-center justify-between hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl outline">
-      <div>
-        <p className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">{post.title}</p>
+    <div className="group bg-white rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out p-4">
+      <div className="h-52 w-full flex items-center justify-center overflow-hidden">
+        <img src={post.image} alt="Product" className="h-full w-auto transition-transform object-cover duration-300 group-hover:scale-110" />
       </div>
-      <div>
-        <p className="w-40 text-gray-400 font-normal text-[10px] text-left">{post.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
-      </div>
-      <div className="h-[180px]">
-        <img src={`${post.image}`} className="h-full w-full" />
-      </div>
-      <div className="flex justify-between gap-12">
-        <div>
-          <p className="text-green-600 font-semibold">{post.price}</p>
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-gray-900 truncate">{post.title}</h3>
+        <p className="text-sm text-gray-600 mt-2 truncate">{post.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
+        <div className="flex justify-between items-center mt-4">
+          <span className="text-xl font-bold text-indigo-600">₹{post.price}</span>
+          {
+            cart.some((p) => p.id === post.id) ? (
+              <button
+                className="text-red-600 border-2 border-red-600 rounded-full font-semibold text-xs py-1 px-3 uppercase transition duration-300 ease-in-out hover:bg-red-600 hover:text-white" 
+                onClick={removeFromCart}>Remove Item</button>
+            ) : (
+              <button
+                className="text-green-600 border-2 border-green-600 rounded-full font-semibold text-xs py-1 px-3 uppercase transition duration-300 ease-in-out hover:bg-green-600 hover:text-white"
+                onClick={addToCart}>Add to Cart</button>
+            )
+          }
         </div>
-        {
-          cart.some((p) => p.id === post.id) ? (
-            <button
-              className="text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in" 
-              onClick={removeFromCart}>Remove Item</button>
-          ) : (
-            <button
-              className="text-gray-700 border-2 border-gray-700 rounded-full font-semibold text-[12px] p-1 px-3 uppercase hover:bg-gray-700 hover:text-white transition duration-300 ease-in"
-              onClick={addToCart}>Add to Cart</button>
-          )
-        }
       </div>
     </div>
   );

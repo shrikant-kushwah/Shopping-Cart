@@ -1,4 +1,3 @@
-import { FcDeleteDatabase } from "react-icons/fc"
 import { useDispatch } from "react-redux";
 import { remove } from "../redux/Slices/cartSlice";
 import { toast } from "react-hot-toast";
@@ -21,11 +20,11 @@ const CartItem = ({item, itemIndex}) => {
         <h1  className="w-full text-gray-400 font-normal text-[15px] text-left mt-4">{item.description}</h1>
         <div className="flex justify-between mt-5">
         <div>
-          <p  className="text-green-600 font-semibold">{item.price}</p>
+          <p  className="text-green-600 font-semibold">₹{item.price}</p>
         </div>
-        <div className="w-6 h-6" 
+        <div className="w-36 justify-center items-center" 
         onClick={removeFromCart}>
-          <FcDeleteDatabase className="w-full h-full"/>
+          <button className='border-2 text-red-500 border-red-500 p-2 w-36 font-semibold hover:border-red-500 rounded-lg hover:bg-red-500 hover:text-white'>Remove Item</button>
         </div>
         </div>
       </div>
