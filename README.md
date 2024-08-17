@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 ## Key Features
-### Add to Cart: 
+# Add to Cart: 
 Users can add products to their cart with a single click. Each product includes an image, title, description, price, and rating.
 ### Remove from Cart:
 Users can remove items from their cart, and the cart updates in real-time.
