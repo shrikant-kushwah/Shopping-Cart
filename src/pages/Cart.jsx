@@ -45,14 +45,20 @@ const Cart = () => {
           </div>
 
         ) : (
-          <div className=" flex flex-col justify-center items-center h-screen">
-            <h1  className="text-gray-700 font-semibold text-3xl truncate mt-1">Empty Cart</h1>
-            <Link to={"/"}>
-              <button className="bg-green-700 text-white px-3 py-2 rounded-md font-bold mt-4">
-                Shop Now
-              </button>
-            </Link>
-          </div>
+          <div className="flex flex-col justify-center items-center h-screen bg-gray-50">
+  <h1 className="text-gray-800 font-bold text-4xl mb-4 text-center">
+    Your Cart is Currently Empty
+  </h1>
+  <p className="text-gray-500 text-lg mb-6 text-center">
+    It looks like you haven't added any items to your cart yet.
+  </p>
+  <Link to={"/"}>
+    <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 ease-in-out">
+      Shop Now
+    </button>
+  </Link>
+</div>
+
         )
       }
     </div>
