@@ -24,7 +24,12 @@ const CartItem = ({item, itemIndex}) => {
         </div>
         <div className="w-36 justify-center items-center" 
         onClick={removeFromCart}>
-          <button className='border-2 text-red-500 border-red-500 p-2 w-36 font-semibold hover:border-red-500 rounded-lg hover:bg-red-500 hover:text-white'>Remove Item</button>
+         <button
+            onClick={removeFromCart}
+            className="text-red-600 border border-red-600 rounded-full py-2 px-4 text-sm font-semibold uppercase transition duration-300 ease-in-out hover:bg-red-600 hover:text-white"
+          >
+            Remove Item
+          </button>
         </div>
         </div>
       </div>
