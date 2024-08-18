@@ -10,7 +10,7 @@ const Home = () => {
 
   async function fetchProductData() {
     setLoading(true);
-    setError(null); // Reset error state on new fetch attempt
+    setError(null); 
 
     try {
       const res = await fetch(API_URL);
