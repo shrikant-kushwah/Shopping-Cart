@@ -1,18 +1,25 @@
 # Getting Started with Create React App
 
-## Key Features
-### Add to Cart: 
-Users can add products to their cart with a single click. Each product includes an image, title, description, price, and rating.
+## Key Features of Shopping Cart
+
+### Add to Cart:  
+Users can add products to their cart with a single click. Each product includes an image, title, description, price, rating and reviews.
+
 ### Remove from Cart:
 Users can remove items from their cart, and the cart updates in real-time.
+
 ### Cart Summary: 
 Displays a summary of items in the cart, including total price and item count.
-Responsive Design: Styled with Tailwind CSS for a responsive and user-friendly interface that adapts to various screen sizes.
+
+### Responsive Design: 
+Styled with Tailwind CSS for a responsive and user-friendly interface that adapts to various screen sizes.
+
 ### Dynamic Data: 
 Product information is sourced from a JSON file, allowing for easy updates and management of product data.
 
 
 ## Tech Stack:
+
 ### React.js: 
 For building interactive and dynamic user interfaces.
 

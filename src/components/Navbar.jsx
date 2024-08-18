@@ -23,7 +23,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink to="/cart" className="relative">
-            <FaShoppingCart className="text-[28px] hover:text-indigo-200 transition duration-300" />
+            <FaShoppingCart className="text-[28px] hover:text-yellow-400 transition duration-300" />
             {cart.length > 0 && (
               <span className="absolute -top-2 -right-2 bg-green-600 text-xs w-5 h-5 flex justify-center items-center animate-bounce rounded-full text-white">
                 {cart.length}
