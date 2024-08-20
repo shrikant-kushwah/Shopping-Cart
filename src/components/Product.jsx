@@ -29,7 +29,7 @@ const Product = ({ post }) => {
   };
 
   return (
-    <div className="group mt-4 mb-4 bg-white rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out p-2 relative">
+    <div className="group mt-4 mb-4 bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out p-2 relative">
       <div className="h-52 w-full flex items-center justify-center overflow-hidden">
         <img src={post.image} alt="Product" className="h-full w-auto transition-transform duration-300 group-hover:scale-110" />
       </div>
