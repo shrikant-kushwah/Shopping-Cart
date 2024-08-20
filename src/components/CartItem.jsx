@@ -22,8 +22,7 @@ const CartItem = ({item, itemIndex}) => {
         <div>
           <p  className="text-gray-900 font-bold text-xl">₹{item.price}</p>
         </div>
-        <div className="w-36 justify-center items-center" 
-        onClick={removeFromCart}>
+        <div className="w-36 justify-center items-center" >
          <button
             onClick={removeFromCart}
             className="text-red-600 border border-red-600 rounded-full py-2 px-4 text-sm font-semibold uppercase transition duration-300 ease-in-out hover:bg-red-600 hover:text-white"
