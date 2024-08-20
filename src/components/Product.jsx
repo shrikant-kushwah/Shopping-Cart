@@ -29,14 +29,14 @@ const Product = ({ post }) => {
   };
 
   return (
-    <div className="group mt-4 mb-4 bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out p-2 relative">
+    <div className="group md:mt-4 bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out p-2 relative">
       <div className="h-52 w-full flex items-center justify-center overflow-hidden">
         <img src={post.image} alt="Product" className="h-full w-auto transition-transform duration-300 group-hover:scale-110" />
       </div>
       <div className="absolute top-2 left-2 bg-gradient-to-r from-red-500 to-red-700 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full shadow-lg">
         {discount}% OFF
       </div>
-      <div className="p-1">
+      <div className="p-2">
         <h3 className="text-lg font-semibold text-gray-900 truncate">{post.title}</h3>
         <p className="text-sm text-gray-600 mt-2 truncate">{post.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
         <div className="flex justify-between items-center mt-2">
